@@ -4,32 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:weightSum="2"
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="50dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/della"
+            android:src="@drawable/della_donald"
             android:scaleType="centerCrop"
             android:layout_gravity="center"/>
 
     </FrameLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingHorizontal="25dp"
-        android:paddingBottom="50dp"
-        android:gravity="bottom"
+        android:padding="25dp"
+        android:gravity="top"
         android:layout_weight="1">
 
         <TextView
@@ -63,35 +62,26 @@
             android:inputType="textPassword"
             android:imeOptions="actionDone"
             />
-        
-        <LinearLayout
+
+        <Button
+            android:id="@+id/btn_main_valid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/btn_valid"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            />
 
-            <Button
-                android:id="@+id/btn_main_valid"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="@string/btn_valid"
-                android:layout_weight="2"
-                />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            />
 
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="0dp"
-                />
-
-            <Button
-                android:id="@+id/btn_main_reset"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="@string/btn_reset"
-                android:layout_weight="1"
-                />
-            
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_main_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_reset"
+            />
 
     </LinearLayout>
 
