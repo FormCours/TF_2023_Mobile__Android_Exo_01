@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btn_valid"
                 android:layout_weight="2"
+                android:enabled="false"
                 />
 
             <Space

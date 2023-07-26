@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -28,6 +29,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnValid.setOnClickListener(this)
         btnReset.setOnClickListener(this)
 
+        inputUsername.addTextChangedListener {
+                text -> lockLoginBtn()
+        }
+        inputPassword.addTextChangedListener {
+                text -> lockLoginBtn()
+        }
+    }
+
+    private fun lockLoginBtn() {
+        val username : String = inputUsername.text.toString()
+        val password : String = inputPassword.text.toString()
+
+        btnValid.isEnabled = !(username.isBlank() || password.isEmpty())
     }
 
     override fun onClick(v: View?) {
